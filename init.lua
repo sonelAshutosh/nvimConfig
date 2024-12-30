@@ -108,7 +108,7 @@ require("lazy").setup({
                     },
                 },
                 window = {
-                    position = "left",  -- Position the Neo-tree window to the left
+                    position = "right",  -- Position the Neo-tree window to the left
                     width = 30,         -- Set width of the Neo-tree window
                 },
             })
@@ -134,4 +134,10 @@ vim.g.mapleader = " "
 
 -- Neo-tree keybindings
 vim.api.nvim_set_keymap("n", "<Leader>e", ":Neotree toggle<CR>", { noremap = true, silent = true })
+
+-- Keybindings for Telescope
+vim.api.nvim_set_keymap("n", "<Leader>ff", ":Telescope find_files<CR>", { noremap = true, silent = true })  -- Search files
+vim.api.nvim_set_keymap("n", "<Leader>fg", ":Telescope live_grep<CR>", { noremap = true, silent = true })   -- Search text in files
+vim.api.nvim_set_keymap("n", "<Leader>fb", ":Telescope buffers<CR>", { noremap = true, silent = true })     -- List open buffers
+vim.api.nvim_set_keymap("n", "<Leader>fh", ":Telescope help_tags<CR>", { noremap = true, silent = true })    -- Search help tags
 
